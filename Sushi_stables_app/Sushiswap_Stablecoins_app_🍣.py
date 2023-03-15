@@ -3,9 +3,17 @@ import streamlit as st
 import pandas as pd
 from shroomdk import ShroomDK
 import os
-import config
 import plotly.express as px
 import openai
+import sys
+import os
+
+parent_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+sys.path.append(parent_directory)
+
+import config
+
+
 
 #layout = wide
 st.set_page_config(layout="wide")
@@ -365,5 +373,13 @@ Since its debut in April 2022, Arbitrum has steadily risin in popularity, accoun
 
 st.subheader('Methodology')
 st.write('''
-Data was collected from the Flipside SDK, 
+In order to create this dashboard, we employed the following methodology:
+
+Data Collection: We obtained data from the Flipside SDK, which provides comprehensive and accurate insights into the activities on Sushiswap. The source code for the dashboard can be found at https://github.com/dghughes84/Sushiswap-Stablecoins/blob/master/sushi_stables_app.py.
+
+Identification of Stablecoins: To identify the stablecoins to be analyzed, we combined information from two sources. First, we referred to the top stablecoins listed on Coingecko. Second, we extracted the top pools by trade volume on Sushiswap and filtered out non-stablecoin pools.
+
+Trade Volume Data Retrieval: Once we had a list of stablecoins to track, we collected the trade volume data for each stablecoin on Sushiswap. The data was then aggregated on a monthly basis to enable a clear understanding of stablecoin trends.
+
+Calculation of Net Stablecoin Volume: We calculated the net stablecoin volume for each token by taking the difference between Amount_in_USD and Amount_out_USD. This metric provides insights into the net inflows and outflows of each stablecoin.
 ''')
