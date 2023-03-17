@@ -441,7 +441,7 @@ st.subheader('Methodology')
 st.write('''
 In order to create this dashboard, we employed the following methodology:
 
-Data Collection: We obtained data from the Flipside SDK, which provides comprehensive and accurate insights into the activities on Sushiswap. The source code for the dashboard can be found at https://github.com/dghughes84/Sushiswap-Stablecoins/blob/master/Sushi_stables_app/Sushiswap_Stablecoins_app.py.
+Data Collection: We obtained data from the Flipside SDK, which provides comprehensive and accurate insights into the activities on Sushiswap. The source code for the dashboard can be found at https://github.com/dghughes84/Sushiswap-Stablecoins/tree/master/Sushi_stables_app. 
 
 Identification of Stablecoins: To identify the stablecoins to be analyzed, we combined information from two sources. First, we referred to the top stablecoins listed on Coingecko. Second, we extracted the top pools by trade volume on Sushiswap and filtered out non-stablecoin pools.
 
