@@ -293,7 +293,7 @@ from poly_stables
 """
 df = querying_pagination(sushi_stables_query)
 # Title and introduction
-st.title("🍣 Stablecoin Activity on Sushi Across Blockchains")
+st.title("🍣 Stablecoin Activity on SushiSwap")
 main_text = """
 This dashboard showcases stablecoin trading activity on SushiSwap across prominent blockchains such as Ethereum, Optimism, Arbitrum, and more. It provides valuable insights into monthly trading volumes, transaction counts, and net stablecoin volumes. The main page of this dashboard aims to answer the following questions:
 """
