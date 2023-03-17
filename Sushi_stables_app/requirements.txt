@@ -1,6 +1,5 @@
 streamlit ==1.19.0
 pandas==1.5.3
 shroomdk
-os
 plotly==5.2.2
 Pillow==9.4.0
