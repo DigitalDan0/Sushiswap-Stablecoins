@@ -12,7 +12,7 @@ import config
 
 #layout = wide
 st.set_page_config(layout="wide",page_title = "Sushiswap Stablecoins")
-
+print(f"Initializing ShroomSDK with API Key: {config.shroomdk_key}")
 
 @st.cache_data
 def querying_pagination(query_string):
