@@ -13,7 +13,7 @@ def load_svg(filename: str) -> str:
         content = f.read()
     return content
 
-svg_logo = load_svg("sushi_stables_app/bnb.svg")
+svg_logo = load_svg("Sushi_stables_app/bnb.svg")
 st.markdown(f'<h1 style="font-size: 3rem; font-weight: bold;">{svg_logo} BSC Stablecoin Swaps</h1>', unsafe_allow_html=True)
 
 #f'<img src="data:image/png;base64,{ethereum_logo_base64}" width="30" height="30" style="vertical-align: middle; padding-bottom: 5px;"/> Ethereum Stablecoin Volume'

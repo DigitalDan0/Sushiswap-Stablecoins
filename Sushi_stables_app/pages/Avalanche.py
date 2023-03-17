@@ -18,7 +18,7 @@ def load_svg(filename: str, width: int = None, height: int = None) -> str:
     return content
 
 
-svg_logo = load_svg("sushi_stables_app/avax.svg",width=40,height=40)
+svg_logo = load_svg("Sushi_stables_app/avax.svg",width=40,height=40)
 st.markdown(f'<h1 style="font-size: 3em; font-weight: bold;">{svg_logo} Avalanche Stablecoin Swaps</h1>', unsafe_allow_html=True)
 
 query = """
