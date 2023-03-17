@@ -1,6 +1,7 @@
 import os
 import sys
-shroomdk_key = os.environ.get('shroomdk_key')
+import streamlit as st
+shroomdk_key = api_key = st.secrets["shroomdk_key"]
 
 print(f"ShroomDK API Key: {shroomdk_key}")
 # In your config.py
