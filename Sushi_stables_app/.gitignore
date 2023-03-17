@@ -1,0 +1,11 @@
+# Ignore Python compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore the config file containing sensitive information
+config_secret.py
+
+# Ignore any cache files
+*.cache

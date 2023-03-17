@@ -4,13 +4,8 @@ import pandas as pd
 from shroomdk import ShroomDK
 import os
 import plotly.express as px
-import openai
 import sys
 import os
-
-parent_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-sys.path.append(parent_directory)
-
 import config
 
 
@@ -18,9 +13,7 @@ import config
 #layout = wide
 st.set_page_config(layout="wide",page_title = "Sushiswap Stablecoins")
 
-openai_key = config.openai_key_2
-openai.api_key = openai_key
-#os.environ["OPENAI_API_KEY"] = openai_key
+
 @st.cache_data
 def querying_pagination(query_string):
     sdk = ShroomDK(config.shroomdk_key)
