@@ -44,8 +44,9 @@ select date_trunc('month',block_timestamp) as month,
   symbol_in as symbol,
   sum(amount_in_usd) as Amount_in_USD,
   count(tx_hash) as tx_count
-from ethereum.sushi.ez_swaps
+from ethereum.core.ez_dex_swaps
 where symbol_in in ('USDT', 'USDC', 'DAI','BUSD','TUSD','FRAX','USDP','USDD','GUSD','PAXG','XAUT','LUSD','EURT','USTC','ALUSD','EURS','MIM','USDX','DOLA','XSGD','RAI','GHO','OHM')
+and platform = 'sushiswap'
 group by 1,2
 order by month DESC, amount_in_usd DESC
 ),
@@ -54,8 +55,9 @@ select date_trunc('month',block_timestamp) as month,
   symbol_out as symbol,
   sum(amount_out_usd) as Amount_out_USD,
   count(tx_hash) as tx_count
-from ethereum.sushi.ez_swaps
+from ethereum.core.ez_dex_swaps
 where symbol_out in ('USDT', 'USDC', 'DAI','BUSD','TUSD','FRAX','USDP','USDD','GUSD','PAXG','XAUT','LUSD','EURT','USTC','ALUSD','EURS','MIM','USDX','DOLA','XSGD','RAI','GHO','OHM')
+and platform = 'sushiswap'
 group by 1,2
 order by month DESC, amount_out_usd DESC
 ),
@@ -77,8 +79,9 @@ select date_trunc('month',block_timestamp) as month,
   symbol_in as symbol,
   sum(amount_in_usd) as Amount_in_USD,
   count(tx_hash) as tx_count
-from optimism.sushi.ez_swaps
+from optimism.core.ez_dex_swaps
 where symbol_in in ('USDT', 'USDC', 'DAI','BUSD','TUSD','FRAX','USDP','USDD','GUSD','PAXG','XAUT','LUSD','EURT','USTC','ALUSD','EURS','MIM','USDX','DOLA','XSGD','RAI','GHO','OHM','sUSD')
+and platform = 'sushiswap'
 group by 1,2
 order by month DESC, amount_in_usd DESC
 ),
@@ -87,8 +90,9 @@ select date_trunc('month',block_timestamp) as month,
   symbol_out as symbol,
   sum(amount_out_usd) as Amount_out_USD,
   count(tx_hash) as tx_count
-from optimism.sushi.ez_swaps
+from optimism.core.ez_dex_swaps
 where symbol_out in ('USDT', 'USDC', 'DAI','BUSD','TUSD','FRAX','USDP','USDD','GUSD','PAXG','XAUT','LUSD','EURT','USTC','ALUSD','EURS','MIM','USDX','DOLA','XSGD','RAI','GHO','OHM','sUSD')
+and platform = 'sushiswap'
 group by 1,2
 order by month DESC, amount_out_usd DESC
 ),
@@ -110,8 +114,9 @@ select date_trunc('month',block_timestamp) as month,
   symbol_in as symbol,
   sum(amount_in_usd) as Amount_in_USD,
   count(tx_hash) as tx_count
-from arbitrum.sushi.ez_swaps
+from arbitrum.core.ez_dex_swaps
 where symbol_in in ('USDT', 'USDC', 'DAI','BUSD','TUSD','FRAX','USDP','USDD','GUSD','PAXG','XAUT','LUSD','EURT','USTC','ALUSD','EURS','MIM','USDX','DOLA','XSGD','RAI','GHO','OHM','sUSD')
+and platform = 'sushiswap'
 group by 1,2
 order by month DESC, amount_in_usd DESC
 ),
@@ -120,8 +125,9 @@ select date_trunc('month',block_timestamp) as month,
   symbol_out as symbol,
   sum(amount_out_usd) as Amount_out_USD,
   count(tx_hash) as tx_count
-from arbitrum.sushi.ez_swaps
+from arbitrum.core.ez_dex_swaps
 where symbol_out in ('USDT', 'USDC', 'DAI','BUSD','TUSD','FRAX','USDP','USDD','GUSD','PAXG','XAUT','LUSD','EURT','USTC','ALUSD','EURS','MIM','USDX','DOLA','XSGD','RAI','GHO','OHM','sUSD')
+and platform = 'sushiswap'
 group by 1,2
 order by month DESC, amount_out_usd DESC
 ),
@@ -143,8 +149,9 @@ select date_trunc('month',block_timestamp) as month,
   symbol_in as symbol,
   sum(amount_in_usd) as Amount_in_USD,
   count(tx_hash) as tx_count
-from avalanche.sushi.ez_swaps
+from avalanche.core.ez_dex_swaps
 where symbol_in in ('USDT', 'USDC', 'DAI','BUSD','TUSD','FRAX','USDP','USDD','GUSD','PAXG','XAUT','LUSD','EURT','USTC','ALUSD','EURS','MIM','USDX','DOLA','XSGD','RAI','GHO','OHM','sUSD')
+and platform = 'sushiswap'
 group by 1,2
 order by month DESC, amount_in_usd DESC
 ),
@@ -153,8 +160,9 @@ select date_trunc('month',block_timestamp) as month,
   symbol_out as symbol,
   sum(amount_out_usd) as Amount_out_USD,
   count(tx_hash) as tx_count
-from avalanche.sushi.ez_swaps
+from avalanche.core.ez_dex_swaps
 where symbol_out in ('USDT', 'USDC', 'DAI','BUSD','TUSD','FRAX','USDP','USDD','GUSD','PAXG','XAUT','LUSD','EURT','USTC','ALUSD','EURS','MIM','USDX','DOLA','XSGD','RAI','GHO','OHM','sUSD')
+and platform = 'sushiswap'
 group by 1,2
 order by month DESC, amount_out_usd DESC
 ),
@@ -176,8 +184,9 @@ select date_trunc('month',block_timestamp) as month,
   symbol_in as symbol,
   sum(amount_in_usd) as Amount_in_USD,
   count(tx_hash) as tx_count
-from bsc.sushi.ez_swaps
+from bsc.core.ez_dex_swaps
 where symbol_in in ('USDT', 'USDC', 'DAI','BUSD','TUSD','FRAX','USDP','USDD','GUSD','PAXG','XAUT','LUSD','EURT','USTC','ALUSD','EURS','MIM','USDX','DOLA','XSGD','RAI','GHO','OHM','sUSD','USDJ')
+and platform = 'sushiswap'
 group by 1,2
 order by month DESC, amount_in_usd DESC
 ),
@@ -186,8 +195,9 @@ select date_trunc('month',block_timestamp) as month,
   symbol_out as symbol,
   sum(amount_out_usd) as Amount_out_USD,
   count(tx_hash) as tx_count
-from bsc.sushi.ez_swaps
+from bsc.core.ez_dex_swaps
 where symbol_out in ('USDT', 'USDC', 'DAI','BUSD','TUSD','FRAX','USDP','USDD','GUSD','PAXG','XAUT','LUSD','EURT','USTC','ALUSD','EURS','MIM','USDX','DOLA','XSGD','RAI','GHO','OHM','sUSD','USDJ')
+and platform = 'sushiswap'
 group by 1,2
 order by month DESC, amount_out_usd DESC
 ),
@@ -209,8 +219,9 @@ select date_trunc('month',block_timestamp) as month,
   symbol_in as symbol,
   sum(amount_in_usd) as Amount_in_USD,
   count(tx_hash) as tx_count
-from gnosis.sushi.ez_swaps
+from gnosis.core.ez_dex_swaps
 where symbol_in in ('USDT', 'USDC', 'DAI','BUSD','TUSD','FRAX','USDP','USDD','GUSD','PAXG','XAUT','LUSD','EURT','USTC','ALUSD','EURS','MIM','USDX','DOLA','XSGD','RAI','GHO','OHM','sUSD')
+and platform = 'sushiswap'
 group by 1,2
 order by month DESC, amount_in_usd DESC
 ),
@@ -219,8 +230,9 @@ select date_trunc('month',block_timestamp) as month,
   symbol_out as symbol,
   sum(amount_out_usd) as Amount_out_USD,
   count(tx_hash) as tx_count
-from gnosis.sushi.ez_swaps
+from gnosis.core.ez_dex_swaps
 where symbol_out in ('USDT', 'USDC', 'DAI','BUSD','TUSD','FRAX','USDP','USDD','GUSD','PAXG','XAUT','LUSD','EURT','USTC','ALUSD','EURS','MIM','USDX','DOLA','XSGD','RAI','GHO','OHM','sUSD')
+and platform = 'sushiswap'
 group by 1,2
 order by month DESC, amount_out_usd DESC
 ),
@@ -242,8 +254,9 @@ select date_trunc('month',block_timestamp) as month,
   symbol_in as symbol,
   sum(amount_in_usd) as Amount_in_USD,
   count(tx_hash) as tx_count
-from polygon.sushi.ez_swaps
+from polygon.core.ez_dex_swaps
 where symbol_in in ('USDT', 'USDC', 'DAI','BUSD','TUSD','FRAX','USDP','USDD','GUSD','PAXG','XAUT','LUSD','EURT','USTC','ALUSD','EURS','MIM','USDX','DOLA','XSGD','RAI','GHO','OHM','sUSD')
+and platform = 'sushiswap'
 group by 1,2
 order by month DESC, amount_in_usd DESC
 ),
@@ -252,8 +265,9 @@ select date_trunc('month',block_timestamp) as month,
   symbol_out as symbol,
   sum(amount_out_usd) as Amount_out_USD,
   count(tx_hash) as tx_count
-from polygon.sushi.ez_swaps
+from polygon.core.ez_dex_swaps
 where symbol_out in ('USDT', 'USDC', 'DAI','BUSD','TUSD','FRAX','USDP','USDD','GUSD','PAXG','XAUT','LUSD','EURT','USTC','ALUSD','EURS','MIM','USDX','DOLA','XSGD','RAI','GHO','OHM','sUSD')
+and platform = 'sushiswap'
 group by 1,2
 order by month DESC, amount_out_usd DESC
 ),
